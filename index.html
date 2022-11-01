@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <div class="main-container">
+        <header class="info-container">
+            <a class="about-fred" href="#">About Fred the Baker Baking Company</a>
+            <a class="inspiration" target="_blank" href="https://orteil.dashnet.org/cookieclicker/">Inspiration for Donut Maker</a>
+            <a class="about-me" href="#">About the developer</a>
+
+        </header>
+        <section class="donut-container">
+            <div class="donut-count">
+                <h2>Donut Count</h2>
+            </div>
+            <div class="donut-button">
+                <button>Click to make some donuts!</button>
+            </div>
+        </section>
+        <section class="auto-clicker-container">
+            <div class="auto-clicker-count">
+                <h2>Auto Clicker Count</h2>
+            </div>
+            <div class="auto-clicker-button">
+                <button>Buy an auto clicker!</button>
+            </div>
+        </section>
+        <section class="modal-container">
+            <div class="modal-content">
+                <p class="about-paragraph"></p>
+                <a class="more-info">More Info</a>
+                <button type="button" class="close">X</button>
+            </div>
+        </section>
+        <section class="multiplier-container">
+            <div class="multiplier-count">
+                <h2>Donut Multiplier Count</h2>
+            </div>
+            <div class="mulitplier-button">
+                <button type="button">Buy a donut multiplier!</button>
+            </div>
+        </section>
+    </div>
 </body>
 <script src="javascript/DonutMaker.js"></script>
+<script src="javascript/app.js"></script>
 </html>
