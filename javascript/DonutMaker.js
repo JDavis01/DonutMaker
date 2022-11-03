@@ -1,4 +1,4 @@
-class DonutMaker {
+export class DonutMaker {
 
     constructor() {
         this.donutCount = 0;
@@ -6,10 +6,11 @@ class DonutMaker {
         this.autoClickerPrice = 100;
         this.multiplierCount = 0;
         this.multiplierPrice = 10;
+        this.multiplier = 0;
     }
 
     getDonutCount() {
-        return this.donutCount;
+        return Math.round(this.donutCount * 10) / 10;
     }
 
     getAutoClickerCount() {
@@ -20,13 +21,16 @@ class DonutMaker {
         return this.multiplierCount;
     }
 
+    getMultiplier() {
+        return Math.round(this.multiplier * 10) / 10;
+    }
+
     addDonutCount() {
-        let multiplier = this.multiplierCount * 1.2
         if (this.multiplierCount > 0) {
-            this.donutCount += multiplier;
+            this.donutCount += this.multiplier;
         }
         else {
-             this.donutCount++;
+            this.donutCount++;
         }
     }
 
@@ -36,47 +40,43 @@ class DonutMaker {
 
     addMultiplierCount() {
         this.multiplierCount++;
+        this.multiplier = this.multiplierCount * 1.2;
     }
 
     autoClickerPurchase() {
         if (this.donutCount >= this.autoClickerPrice) {
-             this.donutCount -= this.autoClickerPrice;
-             this.autoClickerCount++;
-             let increaseCost = this.autoClickerPrice * .1;
-             this.autoClickerPrice += increaseCost;
+            this.donutCount -= this.autoClickerPrice;
+            this.addAutoClickerCount();
+            let increaseCost = this.autoClickerPrice * .1;
+            this.autoClickerPrice += increaseCost;
         }
     }
 
     multiplierPurchase() {
         if (this.donutCount >= this.multiplierPrice) {
             this.donutCount -= this.multiplierPrice;
-            this.multiplierCount++;
+            this.addMultiplierCount();
             let increaseCost = this.multiplierPrice * .1;
             this.multiplierPrice += increaseCost;
-       }
+        }
     }
 
     autoClicking() {
-        let multiplier = this.multiplierCount * 1.2;
-        if (this.multiplierCount > 0) {
-            this.donutCount += multiplier;
+        if (this.autoClickerCount > 0) {
+            if (this.multiplierCount > 0) {
+                this.donutCount += this.multiplier;
+            }
+            else {
+                this.donutCount += this.autoClickerCount;
+            }
         }
-        else {
-            this.donutCount += this.autoClickerCount;
-        }
-    }
-
-    // Below is for testing
-    setDonutCount(count) {
-        this.donutCount = 0;
-        this.donutCount += count;
     }
 
     getAutoClickerPrice() {
-        return this.autoClickerPrice;
+        return Math.round(this.autoClickerPrice * 10) / 10;
     }
 
     getMultiplierPrice() {
-        return this.multiplierPrice;
+        return Math.round(this.multiplierPrice * 10) / 10;
     }
 }

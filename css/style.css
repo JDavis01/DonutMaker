@@ -1,3 +1,68 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: rgba(219, 248, 250, 0.644);
+}
+
 .modal-container {
     display: none;
+}
+
+.donut-count {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    flex-wrap: wrap;
+}
+
+.donut-value {
+    margin-top: 30px;
+}
+
+.donut-button {
+    width: 40px;
+    height: 40px;
+    border: 4px outset chocolate;
+    padding: 5px;
+    outline: 4px inset chocolate;
+    outline-offset: 20px;
+    border-radius: 50%;
+}
+
+.donut-button:hover {
+    border: 4px inset chocolate;
+    outline: 4px outset chocolate;
+    cursor: pointer;
+} 
+
+.donut-button:active {
+    border: 4px outset chocolate;
+    outline: 4px inset chocolate;
+}
+
+.auto-clicker-button {
+    color: gray;
+    border-radius: 5%;
+    padding: 5px;
+    background-color: rgba(214, 159, 159, 0.651);
+}
+
+.multiplier-button {
+    color: gray;
+    border-radius: 5%;
+    padding: 5px;
+    background-color: rgba(214, 159, 159, 0.651);
+}
+
+.reset-game {
+    color: rgba(226, 4, 4, 0.89);
+}
+
+.reset-game:hover {
+    cursor: pointer;
 }
