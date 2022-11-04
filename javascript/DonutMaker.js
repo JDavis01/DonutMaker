@@ -40,7 +40,7 @@ export class DonutMaker {
 
     addMultiplierCount() {
         this.multiplierCount++;
-        this.multiplier = this.multiplierCount * 1.2;
+        this.multiplier = Math.pow(1.2, this.multiplierCount);
     }
 
     autoClickerPurchase() {
