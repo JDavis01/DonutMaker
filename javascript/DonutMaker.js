@@ -63,11 +63,12 @@ export class DonutMaker {
 
     autoClicking() {
         if (this.autoClickerCount > 0) {
+            const numClicks = this.multiplier * this.autoClickerCount;
             if (this.multiplierCount > 0) {
-                this.donutCount += this.multiplier;
+                this.donutCount += numClicks;
             }
             else {
-                this.donutCount += this.autoClickerCount;
+                this.donutCount += this.multiplier;
             }
         }
     }
