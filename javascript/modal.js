@@ -1,13 +1,17 @@
-const modal = document.querySelector(".modal-container");
-const moreInfo = document.querySelector(".more-info");
-const aboutParagraph = document.querySelector(".about-paragraph")
-const closeButton = document.querySelector(".close");
+const modal1 = document.querySelector(".modal-container1");
+const modal2 = document.querySelector(".modal-container2");
+const moreInfo1 = document.querySelector(".more-info1");
+const moreInfo2 = document.querySelector(".more-info2");
+const aboutParagraph1 = document.querySelector(".about-paragraph1");
+const aboutParagraph2 = document.querySelector(".about-paragraph2");
+const closeButton1 = document.querySelector(".close1");
+const closeButton2 = document.querySelector(".close2");
 const fredLink = document.querySelector(".about-fred");
 const aboutMeLink = document.querySelector(".about-me");
 
 fredLink.onclick = function () {
-    modal.style.display = "flex";
-    aboutParagraph.innerHTML = "Fred was best known for his catchphrase " +
+    modal1.style.display = "flex";
+    aboutParagraph1.innerHTML = "Fred was best known for his catchphrase " +
         "\"Time to make the donuts!\", and the commercial that introduced " +
         "the phrase was named one of the five best commercials of the 1980s " +
         "by the Television Bureau of Advertising. Sometimes commercials would not be about Fred\'s work, " +
@@ -22,13 +26,13 @@ fredLink.onclick = function () {
         "company created an official \"retirement\" celebration for him, " +
         "including a parade in the city of Boston and a \"free donut\" day " +
         "that served over six million customers on September 22, 1997.";
-    moreInfo.setAttribute("href", "https://en.wikipedia.org/wiki/Fred_the_Baker")
+    moreInfo1.setAttribute("href", "https://en.wikipedia.org/wiki/Fred_the_Baker")
 
 }
 
 aboutMeLink.onclick = function () {
-    modal.style.display = "flex";
-    aboutParagraph.innerHTML = "Born April 15, 1991 in Columbus Ohio. Grew up " +
+    modal2.style.display = "flex";
+    aboutParagraph2.innerHTML = "Born April 15, 1991 in Columbus Ohio. Grew up " +
         "and went to school at Pickerington Central. Graduated " +
         "Highschool in 2010 and soon after met my wife at Ohio Valley " +
         "University. " +
@@ -40,9 +44,13 @@ aboutMeLink.onclick = function () {
         "I am currently working my way through We Can Code It's bootcamp " +
         "program. " +
         "Below are recent projects I have worked on.";
-    moreInfo.setAttribute("href", "http://jdavis01.github.io/");
+    moreInfo2.setAttribute("href", "http://jdavis01.github.io/");
 }
 
-closeButton.onclick = function () {
-    modal.style.display = "none";
+closeButton1.onclick = function () {
+    modal1.style.display = "none";
+}
+
+closeButton2.onclick = function () {
+    modal2.style.display = "none";
 }

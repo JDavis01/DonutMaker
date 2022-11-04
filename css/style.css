@@ -6,7 +6,11 @@ body {
     background-color: rgba(219, 248, 250, 0.644);
 }
 
-.modal-container {
+.modal-container1 {
+    display: none;
+}
+
+.modal-container2 {
     display: none;
 }
 

@@ -12,35 +12,47 @@
 
 <body>
     <div class="main-container">
-        <header class="info-container">
+        <header class="fred-container">
             <a class="about-fred" href="#">About Fred the Baker Baking Company</a>
+        </header>
+        <header class="inspiration-container">
             <a class="inspiration" target="_blank" href="https://orteil.dashnet.org/cookieclicker/">Inspiration for
                 Donut Maker</a>
+        </header>
+        <header class="about-me-container">
             <a class="about-me" href="#">About the developer</a>
-            </header>
+        </header>
+        <section class="modal-container1">
+            <div class="modal-content1">
+                <p class="about-paragraph1"></p>
+                <a class="more-info1" target="_blank">More Info</a>
+                <button type="button" class="close1">X</button>
+            </div>
+        </section>
         <section class="donut-container">
             <h2 class="donut-count">Donut Count: 0</h2>
             <div class="donut-button"></div>
             <h3 class="donut-value">Donut Value: 1</h3>
+        </section>
+        <section class="modal-container2">
+            <div class="modal-content2">
+                <p class="about-paragraph2"></p>
+                <a class="more-info2" target="_blank">More Info</a>
+                <button type="button" class="close2">X</button>
+            </div>
         </section>
         <section class="auto-clicker-container">
                 <h2 class="auto-clicker-count">Auto Clicker Count: 0</h2>
                 <h3 class="auto-clicker-price">Price: 100 donuts</h3>
                 <button type="button" class="auto-clicker-button">Buy an auto clicker!</button>
         </section>
-        <section class="modal-container">
-            <div class="modal-content">
-                <p class="about-paragraph"></p>
-                <a class="more-info">More Info</a>
-                <button type="button" class="close">X</button>
-            </div>
-        </section>
+        
         <section class="multiplier-container">
                 <h2 class="multiplier-count">Donut Multiplier Count: 0</h2>
                 <h3 class="multiplier-price">Price: 10 donuts</h3>
                 <button class="multiplier-button">Buy a donut multiplier!</button>
         </section>
-        <div class="reset-game">Reset Game</div>
+        <div class="reset-game"><h5>Reset Game</h5></div>
     </div>
 </body>
 <script src="javascript/DonutMaker.js" type="module"></script>
